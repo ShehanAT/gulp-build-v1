@@ -1,7 +1,9 @@
 .DS_Store
 .sass-cache
+
 # Dependency directories
-./node_modules/
+node_modules/
+
 # Logs
 logs
 *.log
