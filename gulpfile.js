@@ -58,21 +58,21 @@ gulp.task('images',function(){
 
 gulp.task('watchSass', function(){
     gulp.watch(['./sass/circle/**/*.sass','./sass/*.scss','./sass/circle/*.sass'],['styles'])
-    gulp.watch('js/')
 })
 
-gulp.task('build', ['scripts','styles','images'],function(callback){
+gulp.task('build', ['scripts','styles','images','watchSass'],function(callback){
     return gulp.src([], {base:'./'})
         .pipe(gulp.dest('dist'));
 });
 
-gulp.task('serve', ['watchSass']);
-
 gulp.task('default', ['clean'], function(){
     gulp.start('build', function(){
-        connect.server({
-            
-        });
+        
     });
+    connect.server({
+        
+    });
+    
+    
 });
 
