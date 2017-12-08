@@ -62,7 +62,7 @@ gulp.task('watchSass', function(){
 })
 
 gulp.task('build', ['scripts','styles','images'],function(callback){
-    return gulp.src(["index.html","sass/_variables.scss","sass/global.scss"], {base:'./'})
+    return gulp.src([], {base:'./'})
         .pipe(gulp.dest('dist'));
 });
 
